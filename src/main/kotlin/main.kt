@@ -1,29 +1,15 @@
 fun main(){
 
-    //นี่คือ Hippo ของฉัน
-    var myhippo = Hippo()
-    myhippo.eat()
-    myhippo.roam()
-    myhippo.makeNoise()
-    myhippo.sleep()
-
-    println("")
-
-    //สร้างแมวของเรา
-    var mycat = Cat()
-    //เขียนให้แมวเรา eat, roam, makenoise, sleep
-    mycat.eat()
-    mycat.roam()
-    mycat.makeNoise()
-    mycat.sleep()
-
     println("------- สร้างตัวแปรสุนัข --------")
     // สร้างตัวแปรสุนัข
-    var myDog = Dog()
-    myDog.eat()
-    myDog.roam()
-    myDog.makeNoise()
-    myDog.sleep()
+    var previousDog :Dog? = null;
+    var myDog = previousDog;
+
+    myDog?.eat() ?: println("Null is called");
+//    myDog.roam()
+//    myDog.makeNoise()
+//    myDog.sleep()
+
 }
 
 open class Animal{
