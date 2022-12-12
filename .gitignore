@@ -1,0 +1,10 @@
+
+build/
+
+.gradle/7.6/executionHistory/
+
+*.bin
+
+.gradle/7.6/fileHashes/
+
+.gradle/buildOutputCleanup/

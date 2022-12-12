@@ -1,15 +1,29 @@
 fun main(){
 
-    println("------- สร้างตัวแปรสุนัข --------")
-    // สร้างตัวแปรสุนัข
-    var previousDog :Dog? = null;
-    var myDog = previousDog;
+    var dog: Dog? = Dog();
+    if (dog != null) {
+        dog.eat();
+    }
 
-    myDog?.eat() ?: println("Null is called");
-//    myDog.roam()
-//    myDog.makeNoise()
-//    myDog.sleep()
+    var d = dog?.food;
+    println("The value of d is $d")
 
+    var d1 = dog?.food ?: -1
+    println("The value of d1 is $d1");
+
+    fun getAlphaDog() : Dog? {
+        return Dog()
+    }
+
+    var myArray = arrayOf("Hi","Hello", null)
+    for (item in myArray) {
+        item?.let {println(it)};
+    }
+
+    getAlphaDog()?.let { it.eat() }
+
+    dog = null
+    var z = dog!!.eat()
 }
 
 open class Animal{
